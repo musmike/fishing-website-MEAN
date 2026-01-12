@@ -1,11 +1,12 @@
 services:
   db:
-    image: mongo:6
+    image: mongo:8.2.3
     container_name: fishing_shop_db
     ports:
       - "27017:27017"
     volumes:
       - fishing_shop_data:/data/db
+
   backend:
     build: ./backend
     container_name: fishing_shop_backend
